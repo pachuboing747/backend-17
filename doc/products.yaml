@@ -1,0 +1,69 @@
+paths:
+  /api/products:
+    get:
+      summary: Obtener todos los productos
+      tags: 
+      - Products
+      responses:
+        '200':
+          description: 'Éxito: Lista de productos'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+    put:
+      summary: Crear un producto
+      tags: 
+      - Products
+      responses:
+        '200':
+          description: 'Éxito al crear producto'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error al crear producto
+  /api/products/:id:
+    get:
+      summary: Obtener los productos por id
+      tags: 
+      - Products
+      responses:
+        '200':
+          description: 'Se Obtienen los productos por id, obtenido desde MongoDB'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+    delete:
+      summary: Borrar los productos por id
+      tags: 
+      - Products
+      responses:
+        '200':
+          description: 'Se borran los productos por id, obtenido desde MongoDB'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+    put:
+      summary: Crear los productos por id
+      tags: 
+      - Products
+      responses:
+        '200':
+          description: 'Se cren los productos por id, obtenido desde MongoDB'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+  

@@ -1,0 +1,19 @@
+<div id="productos" class="uk-child-width-1-4@m" uk-grid>
+    {{#each products}}
+    <div>
+        <div class="uk-card uk-card-default">
+        <h2>{{title}}</h2>
+        <p>Precio: {{price}}</p>
+        <p>Descripcion: {{description}}</p>
+       <form action="/products" method="POST">
+        <input type="hidden" name="productId" value="{{_id}}">
+        <input type="hidden" name="title" value="{{title}}">
+        <input type="hidden" name="price" value="{{price}}">
+        <input type="hidden" name="description" value="{{description}}">
+        <input type="hidden" name="stock" value="{{stock}}">
+        <button type="submit">Agregar al carrito</button>
+      </form>
+        </div>
+    </div>
+    {{/each}}
+</div>

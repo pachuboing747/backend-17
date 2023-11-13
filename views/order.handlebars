@@ -1,0 +1,14 @@
+<div class="orden">
+    <h3>Se te envio al correo electronico {{order.purchaser}} el ticket de compra realizado.</h3>
+    <div>
+        <h3>Informacion de tu compra:</h3>
+        <p>Fecha de la compra: {{order.purchaseDate}}</p>
+        <p>Codigo: {{order.code}}</p>
+        <p>Total de productos: {{order.products.length}}</p>
+        <p>Importe Total: {{order.total}}</p>
+    </div>
+    <h3>¡Muchas gracias por tu compra y te esperamos nuevamente!</h3>
+    <a href="/">
+        <button class="boton">Volver</button>
+    </a>
+</div>

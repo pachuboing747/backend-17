@@ -1,0 +1,123 @@
+paths:
+  /api/carts:
+    get:
+      summary: Obtener todos los productos del carrito
+      tags: 
+      - Carts
+      responses:
+        '200':
+          description: 'Ver la lista de productos del carrito'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+    post:
+      summary: Crear un producto en el carrito
+      tags: 
+      - Carts
+      responses:
+        '200':
+          description: Agregar un producto en el carrito
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error al crear producto
+  /api/carts/:id:
+    delete:
+      summary: Borrar productos del carrito por id
+      tags: 
+      - Carts
+      responses:
+        '200':
+          description: 'Se borran productos del carrito por id'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+  /api/carts/:cid:
+    get:
+      summary: Obtener los productos por id
+      tags: 
+      - Carts
+      responses:
+        '200':
+          description: 'Se obtienen los productos del carrito por id'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+    put:
+      summary: Crear productos del carrito por id
+      tags: 
+      - Carts
+      responses:
+        '200':
+          description: 'Se crean los productos del carrito por id'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+    delete:
+      summary: Borrar productos del carrito por id
+      tags: 
+      - Carts
+      responses:
+        '200':
+          description: 'Se borra los productos del carrito por id'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+  /:cid/products/:pid:
+    delete:
+      summary: eliminación de un producto dentro de la  categoría  products identificada por "id" 
+      tags: 
+      - Carts
+      responses:
+        '200':
+          description: 'Se borra un producto dentro de la categoria products por id'
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+    put:
+      summary: Modificacion de un producto dentro de la  categoría  products identificada por cid 
+      tags: 
+      - Carts
+      responses:
+        '200':
+          description: Se modifica un producto dentro de la categoria products por cid
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor
+  /:cid/purchase:
+    get:
+      summary: Modificacion de un producto por cid 
+      tags: 
+      - Carts
+      responses:
+        '200':
+          description: Se modifica un producto por cid
+          conten:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: Error del servidor

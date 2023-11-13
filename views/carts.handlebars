@@ -1,0 +1,22 @@
+<body>
+  {{#each carts}}
+    <h2>Id del Producto: {{_id}}</h2>
+    <ul>
+      {{#each products}}
+        <li>
+            {{#if this.thumbnail}}
+                <img src="{{this.thumbnail}}" alt="imagen">
+                {{else}}
+                <p>Imagen no disponible</p>
+            {{/if}}
+          <p>Cantidad: {{this.qty}}</p>
+           <h5>ARG ${{this.price}}</h5>
+            <p>{{this.description}}</p>
+            <p>{{this.code}}</p>
+            <p>{{this.stock}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  {{/each}}
+</body>
+</html>
